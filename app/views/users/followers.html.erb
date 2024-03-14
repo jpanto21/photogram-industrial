@@ -1,0 +1,10 @@
+<%= render "shared/tabs" %>
+<div class="col-md-6 offset-3">
+  <div class="list-group" >
+  <% @user.followers.each do |follower| %>
+  <li class="list-group-item list-group-item-action">
+    <%= link_to "#{follower.username}", user_path(follower.username) %>
+  </li>
+  <% end %>
+  </div>
+</div>
